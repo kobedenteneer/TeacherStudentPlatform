@@ -1,0 +1,13 @@
+nelmio_cors:
+    defaults:
+        allow_origin: ['*'] # Pas dit aan naar de domeinen van je frontend in productie
+        allow_methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+        allow_headers: ['Content-Type', 'Authorization']
+        expose_headers: ['Authorization']
+        max_age: 3600
+    paths:
+        '^/': # Pas dit aan naar je API-routes
+            allow_origin: ['*']
+            allow_methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+            allow_headers: ['Content-Type', 'Authorization']
+            max_age: 3600
